@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Notifications from './src/screens/notification';
+import NotificationsAndDocumet from './src/screens/notification-document';
 
 const App = () => {
-  return <Notifications />;
+  return <NotificationsAndDocumet />;
 };
 
 export default App;

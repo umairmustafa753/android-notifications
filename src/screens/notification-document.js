@@ -9,9 +9,10 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {handleDisplayNotification} from '../services/notification.android';
+import {handlePickDocument} from '../services/document.android';
 import styles from './styles';
 
-const Notifcations = () => {
+const NotificationsAndDocumet = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -27,8 +28,12 @@ const Notifcations = () => {
         }>
         <Text>Send Notifcation</Text>
       </TouchableOpacity>
+      <View style={styles.margin} />
+      <TouchableOpacity onPress={() => handlePickDocument()}>
+        <Text>Pick Document</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
-export default Notifcations;
+export default NotificationsAndDocumet;
