@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {handleDisplayNotification} from '../services/notification.android';
 import styles from './styles';
 
 const Notifcations = () => {
@@ -20,7 +21,10 @@ const Notifcations = () => {
   return (
     <View style={[backgroundStyle, styles.wrapper]}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() =>
+          handleDisplayNotification('Test', 'This is test message')
+        }>
         <Text>Send Notifcation</Text>
       </TouchableOpacity>
     </View>
