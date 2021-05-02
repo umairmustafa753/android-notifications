@@ -21,7 +21,7 @@ const Notifcations = () => {
     <View style={[backgroundStyle, styles.wrapper]}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <TouchableOpacity>
-        <Text>Send Notifcations</Text>
+        <Text>Send Notifcation</Text>
       </TouchableOpacity>
     </View>
   );
